@@ -1,3 +1,3 @@
 # PythonPractice
-Journey of python\n
+Journey of python
 Learning Python Need some tips
