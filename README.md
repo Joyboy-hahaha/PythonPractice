@@ -1,0 +1,2 @@
+# PythonPractice
+Journey of python
