@@ -1,4 +1,4 @@
 # PythonPractice
-<h1>Journey Of Python</h1>
+<h3>Journey Of Python</h3>
 <br>
 <p><em>Need some tips to improve</em></p>
