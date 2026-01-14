@@ -1,5 +1,12 @@
 # PythonPractice
-<h3>Journey Of Python</h3>
+<h2>This repository contains beginner python program to practice.</h2>
+
+<b>Programs</b>
 <br>
-<p><em>Need some tips to improve</em></p>
-<p><b>Life is all about Learning</b></p>
+calculator.py => Simple calculator performing +,-,*,/ 
+<br>
+password_checker.py => Checks password strength 
+<br>
+contactDirectory.py => Simple CLI contact list management 
+<br>
+Todo.py => Basic TODO list app 
