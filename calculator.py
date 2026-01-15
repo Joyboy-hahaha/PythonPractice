@@ -64,71 +64,76 @@ def clear_history():
     history.clear()
     print('History Cleared')
 
-while True:
-    print("\n=== CALCULATOR ===")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-    print("5. Power")
-    print("6. Square root")
-    print("7. Percentage")
-    print("8. View history")
-    print("9. Clear History")
-    print("0. Exit")
 
-    choice = input('Enter choice: ').strip()
-    
-    if choice == '0':
-        print('GoodBye')
-        break
+def run_program():
+    while True:
+        print("\n=== CALCULATOR ===")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Multiply")
+        print("4. Divide")
+        print("5. Power")
+        print("6. Square root")
+        print("7. Percentage")
+        print("8. View history")
+        print("9. Clear History")
+        print("0. Exit")
 
-    if choice  == '8':
-        show_history()
-        continue
-    
-    if choice == '9':
-        clear_history()
-        continue
+        choice = input('Enter choice: ').strip()
+        
+        if choice == '0':
+            print('GoodBye')
+            break
 
-    try:
-        if choice in ['1', '2', '3', '4', '5', '7']:
-            first = float(input('Enter first number: '))
-            second = float(input('Enter second number: '))
+        if choice  == '8':
+            show_history()
+            continue
+        
+        if choice == '9':
+            clear_history()
+            continue
 
-            if choice == '1':
-                result = addition(first, second)
-                answer = f'{first} + {second} = {result}'
-            
-            elif choice == '2':
-                result = subtraction(first, second)
-                answer = f'{first} - {second} = {result}'
+        try:
+            if choice in ['1', '2', '3', '4', '5', '7']:
+                first = float(input('Enter first number: '))
+                second = float(input('Enter second number: '))
 
-            elif choice == '3':
-                result = multiply(first, second)
-                answer = f'{first} * {second} = {result}'
+                if choice == '1':
+                    result = addition(first, second)
+                    answer = f'{first} + {second} = {result}'
+                
+                elif choice == '2':
+                    result = subtraction(first, second)
+                    answer = f'{first} - {second} = {result}'
 
-            elif choice == '4':
-                result = divide(first, second)
-                answer = f'{first} / {second} = {result}'
+                elif choice == '3':
+                    result = multiply(first, second)
+                    answer = f'{first} * {second} = {result}'
 
-            elif choice == '5':
-                result = power(first, second)
-                answer = f'{first} ** {second} = {result}'
+                elif choice == '4':
+                    result = divide(first, second)
+                    answer = f'{first} / {second} = {result}'
 
-            elif choice == '7':
-                result = percentage(first, second)
-                answer = f'{first} % {second} = {result}'
+                elif choice == '5':
+                    result = power(first, second)
+                    answer = f'{first} ** {second} = {result}'
 
-            print(answer)
-            saveHistory(answer)
+                elif choice == '7':
+                    result = percentage(first, second)
+                    answer = f'{first} % {second} = {result}'
 
-        elif choice == '6':
-            a = float(input('Enter a number: '))
-            result = square_root(a)
-            answer = f"√{a} = {result}"
-            print(answer)
-            saveHistory(answer)
-    
-    except (ValueError, ZeroDivisionError) as e:
-        print(f'Error: {e}')
+                print(answer)
+                saveHistory(answer)
+
+            elif choice == '6':
+                a = float(input('Enter a number: '))
+                result = square_root(a)
+                answer = f"√{a} = {result}"
+                print(answer)
+                saveHistory(answer)
+        
+        except (ValueError, ZeroDivisionError) as e:
+            print(f'Error: {e}')
+
+if __name__ == '__main__':
+    run_program()
